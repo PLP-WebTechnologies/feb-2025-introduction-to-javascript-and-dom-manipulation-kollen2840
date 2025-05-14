@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>South Sudan: History, Life, and Peace</title>
+  <style>
+    /* Element selector */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d6f5d6, #a6d609);
+      color: #264d00; /* Dark green for text */
+      margin: 20px;
+      padding: 10px;
+      line-height: 1.6;
+    }
+
+    /* ID selector */
+    #header {
+      text-align: center;
+      color: #4caf50; /* Lime green shade */
+      margin-bottom: 30px;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #9ccc65;
+    }
+
+    /* Class selector */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 960px;
+      margin: 0 auto 40px;
+      padding: 10px;
+    }
+
+    /* Cards for paragraphs */
+    .grid-item {
+      background-color: #e6f2d6;
+      border: 3px solid #89f336; /* bright lime green */
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 10px rgba(137, 243, 54, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .grid-item:hover {
+      box-shadow: 0 10px 20px rgba(137, 243, 54, 0.6);
+    }
+
+    /* Paragraph styling inside cards */
+    .grid-item p {
+      font-size: 1.1rem;
+      color: #33691e;
+      margin-bottom: 1rem;
+    }
+
+    /* Buttons styling */
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(90deg, #32cd32, #89f336);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(50, 205, 50, 0.5);
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+      margin-top: 15px;
+      font-family: inherit;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #aadd06, #32cd32);
+      box-shadow: 0 6px 14px rgba(137, 243, 54, 0.8);
+    }
+
+    /* Input styling */
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 2px solid #89f336;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #264d00;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #32cd32;
+      outline: none;
+    }
+
+    /* Answer container styling */
+    .answer-container {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="header">South Sudan: History, Way of Living, Conflicts, and Peace</h1>
+  </header>
+
+  <main class="grid-container">
+
+    <section class="grid-item">
+      <p>South Sudan, the world’s youngest country, gained independence in 2011 after decades of conflict with Sudan. The region’s diverse ethnic groups have lived there since the 15th century, enduring colonial rule and struggles for autonomy. How has South Sudan’s complex history shaped its national identity?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+    <section class="grid-item">
+      <p>The people of South Sudan primarily belong to Nilotic ethnic groups, with a rich cultural heritage rooted in pastoralism, farming, and traditional beliefs alongside Christianity and Islam. What aspects of South Sudanese culture are most important to preserve today?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+    <section class="grid-item">
+      <p>South Sudan’s history has been marked by two brutal civil wars, fueled by ethnic divisions and political power struggles. These conflicts caused massive displacement and loss of life. How can South Sudan overcome ethnic tensions to build lasting peace?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+    <section class="grid-item">
+      <p>The Comprehensive Peace Agreement of 2005 and the 2011 independence referendum were milestones toward peace, yet violence and instability persist. What strategies could strengthen governance and reconciliation in South Sudan?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+    <section class="grid-item">
+      <p>Economic challenges, including poverty and underdevelopment, hamper South Sudan’s recovery and growth. Agriculture remains the backbone of livelihoods but is vulnerable to conflict and climate shocks. How might sustainable development be promoted in South Sudan?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+    <section class="grid-item">
+      <p>International organizations and regional bodies like the African Union play a key role in mediating peace and supporting humanitarian aid. What role should the global community take in South Sudan’s future stability?</p>
+      <input type="text" placeholder="Your answer here..." />
+      <button class="submit-btn">Submit</button>
+      <div class="answer-container"></div>
+    </section>
+
+  </main>
+
+  <script>
+    // Select all submit buttons
+    const buttons = document.querySelectorAll('.submit-btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Get the sibling input element
+        const input = button.previousElementSibling;
+        const answerText = input.value.trim();
+
+        // Get the container to hold the answer
+        const container = button.nextElementSibling;
+
+        // Clear previous content
+        container.innerHTML = '';
+
+        if (answerText) {
+          // Create header element
+          const answerHeader = document.createElement('h3');
+          answerHeader.textContent = 'Answer';
+
+          // Create paragraph element for the answer text
+          const answerParagraph = document.createElement('p');
+          answerParagraph.textContent = answerText;
+
+          // Append header and paragraph to container
+          container.appendChild(answerHeader);
+          container.appendChild(answerParagraph);
+
+          // Modify styles dynamically
+          container.style.border = '2px solid #4CAF50';
+          container.style.padding = '10px';
+          container.style.marginTop = '10px';
+          container.style.backgroundColor = '#e8f5e9';
+
+          // Clear the input box after submission
+          input.value = '';
+        } else {
+          // If input is empty, remove any existing answer container styles
+          container.style.border = '';
+          container.style.padding = '';
+          container.style.marginTop = '';
+          container.style.backgroundColor = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
